@@ -16,4 +16,10 @@ Metal Llama is a from-scratch implementation of the Llama 2 architecture, design
     * Custom INT8 Symmetric (Absmax) Quantization implemented from scratch.
     * Benchmarking suite for TTFT (Time to First Token) and TPOT (Time per Output Token).
 
-## Performance Benchmarking
+# TODOs:
+- Datasets
+    - [x] TinyShakespeare data and Character level tokeniser
+    - [ ] torch dataset class to load either tiny shakespeare or FineWeb EDU
+    - [ ] Llama BPE tokeniser
+    - [ ] Cache encodings: Save the processed tokenised string as `uint16` and use that instead of encoding on the fly
+    - [ ] Use memory mapped files to reach the cached encodings so that I don't have to load them all into RAM
