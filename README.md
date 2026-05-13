@@ -21,5 +21,5 @@ Metal Llama is a from-scratch implementation of the Llama 2 architecture, design
     - [x] TinyShakespeare data and Character level tokeniser
     - [ ] torch dataset class to load either tiny shakespeare or FineWeb EDU
     - [ ] Llama BPE tokeniser
-    - [ ] Cache encodings: Save the processed tokenised string as `uint16` and use that instead of encoding on the fly
-    - [ ] Use memory mapped files to reach the cached encodings so that I don't have to load them all into RAM
+    - [ ] Cache encodings: Save the processed tokenised string as `uint16` and use that instead of encoding on the fly. If there is no cache, create it and save it for next time.
+    - [ ] Use memory mapped files (numpy.memmap) to reach the cached encodings so that I don't have to load them all into RAM
