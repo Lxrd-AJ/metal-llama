@@ -13,8 +13,7 @@ class Tokenizer(ABC):
 
 
 class CharacterTokenizer(Tokenizer):
-    def __init__(self, vocabFile: str):
-        contents = open(vocabFile).read()
+    def __init__(self, contents: str):
         vocab = sorted(set(contents))
         self.__stoi = {c:i for i, c in enumerate(vocab)}
         self.__itos = {i:c for c, i in self.__stoi.items()}

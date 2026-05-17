@@ -2,9 +2,10 @@ from data.Tokenizer import CharacterTokenizer
 
 
 class CharacterTokenizerTests:
-    shakeFile = "./data/datasets/tinyshakespeare.txt"
+    shakeFile = "./data/tinyshakespeare.txt"
+    poetry = open(shakeFile).read()
 
-    specimen = CharacterTokenizer(vocabFile=shakeFile)
+    specimen = CharacterTokenizer(contents=poetry)
 
     def test_canEncodeDecode(self):
         words = [
